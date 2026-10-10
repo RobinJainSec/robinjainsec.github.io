@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080214">
+<meta name="description" content="Robin Jain is a VAPT analyst in India specializing in web application penetration testing, API security, mobile app security, network VA/PT and bug bounty research.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<title>Robin Jain | VAPT Analyst &amp; Application Security Professional</title>
+<link rel="canonical" href="https://robinjainsec.github.io/sec/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Robin Jain | VAPT Analyst &amp; Application Security Professional">
+<meta property="og:description" content="Application security, web and API penetration testing, mobile security and bug bounty research by Robin Jain.">
+<meta property="og:url" content="https://robinjainsec.github.io/sec/">
+<meta property="og:site_name" content="Robin Jain — Application Security">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Robin Jain | VAPT Analyst &amp; Application Security Professional">
+<meta name="twitter:description" content="Web VAPT, API security, mobile app security, network testing and bug bounty research.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Robin Jain",
+  "url": "https://robinjainsec.github.io/sec/",
+  "jobTitle": "Application Security Consultant and VAPT Analyst",
+  "description": "Application security professional specializing in web application penetration testing, API security, mobile application security, network VA/PT and bug bounty research.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Noida",
+    "addressRegion": "Uttar Pradesh",
+    "addressCountry": "IN"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/robinjain1",
+    "https://github.com/RobinJainSec",
+    "https://www.twitter.com/jain_robin___"
+  ],
+  "knowsAbout": [
+    "Application Security",
+    "Web Application Penetration Testing",
+    "API Security Testing",
+    "Mobile Application Security",
+    "Network Vulnerability Assessment and Penetration Testing",
+    "Bug Bounty Research",
+    "OWASP Top 10"
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#080214;--panel:#160d27;--panel2:#211239;--text:#f5f0ff;--muted:#b1a6c3;
+  --line:rgba(199,189,215,.17);--acid:#b55cff;--cyan:#7AA69F;--blue:#C7BDD7;
+  --warm:#BB5633;--max:1220px;--radius:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;max-width:100%;overflow-x:clip}
+body{margin:0;max-width:100%;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;overflow-x:clip}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+::selection{background:var(--acid);color:#091006}
+#cyberCanvas{position:fixed;inset:0;width:100%;height:100%;z-index:-3;pointer-events:none;opacity:.76}
+.bg-vignette{position:fixed;inset:0;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 60% 34%,transparent 0%,rgba(8,2,20,.15) 42%,rgba(8,2,20,.88) 100%),linear-gradient(180deg,rgba(8,2,20,.12),rgba(8,2,20,.73))}
+.bg-grid{position:fixed;inset:-30%;z-index:-2;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(150,35,214,.17) 1px,transparent 1px),linear-gradient(90deg,rgba(150,35,214,.17) 1px,transparent 1px);background-size:70px 70px;transform:perspective(650px) rotateX(67deg) translateY(23%);transform-origin:center center;mask-image:linear-gradient(transparent 6%,black 36%,transparent 90%);animation:gridDrift 24s linear infinite}
+@keyframes gridDrift{to{background-position:0 70px,70px 0}}
+.pointer-glow{position:fixed;z-index:-1;width:300px;height:300px;border-radius:50%;background:rgba(122,166,159,.06);filter:blur(65px);pointer-events:none;transform:translate(-50%,-50%)}
+.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}
+header{position:sticky;top:0;z-index:50;border-bottom:1px solid var(--line);background:rgba(8,2,20,.81);backdrop-filter:blur(22px)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.05em;font-size:15px}
+.brand-mark{width:37px;height:37px;display:grid;place-items:center;border:1px solid rgba(150,35,214,.62);border-radius:12px;color:var(--acid);font:500 12px 'DM Mono',monospace;box-shadow:0 0 24px rgba(150,35,214,.08);transform:rotate(-7deg)}
+.brand small{display:block;font:9px 'DM Mono',monospace;color:#8e7ea8;letter-spacing:.14em;margin-top:3px}
+.navlinks{display:flex;gap:5px;padding:5px;border:1px solid var(--line);border-radius:15px;background:rgba(22,13,39,.82)}
+.navlinks button{border:0;background:transparent;color:#aab5a8;padding:10px 15px;border-radius:10px;font-size:11px;font-weight:800;cursor:pointer;transition:.2s}
+.navlinks button:hover,.navlinks button.active{background:rgba(150,35,214,.12);color:var(--acid)}
+.nav-cta{border:1px solid rgba(150,35,214,.55);color:var(--acid);padding:12px 15px;border-radius:12px;font-size:11px;font-weight:800;white-space:nowrap;transition:.2s}
+.nav-cta:hover{background:var(--acid);color:#ffffff}
+main{min-height:75vh}
+.page{display:none;animation:pageIn .55s cubic-bezier(.18,.75,.25,1) both}
+.page.active{display:block}
+@keyframes pageIn{from{opacity:0;transform:translateY(14px);filter:blur(4px)}to{opacity:1;transform:none;filter:blur(0)}}
+.mono{font:10px 'DM Mono',monospace;letter-spacing:.17em;text-transform:uppercase}
+.eyebrow{display:flex;align-items:center;gap:10px;color:var(--acid);font:10px 'DM Mono',monospace;letter-spacing:.17em;text-transform:uppercase}
+.pulse{width:7px;height:7px;border-radius:50%;background:var(--acid);box-shadow:0 0 0 5px rgba(150,35,214,.09);animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 9px rgba(150,35,214,0)}}
+.hero{min-height:690px;padding:76px 0 60px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:36px;position:relative}
+.hero-copy{position:relative;z-index:2}
+.hero-index{font:10px 'DM Mono',monospace;color:#8b7ba4;letter-spacing:.12em;margin-top:22px}
+h1{font-size:clamp(44px,6.6vw,88px);line-height:.9;letter-spacing:-.085em;margin:20px 0 26px;font-weight:800}
+h1 .solid{display:block;color:var(--text)}
+h1 .outline{display:block;color:transparent;-webkit-text-stroke:1px rgba(245,240,255,.65);text-shadow:0 0 40px rgba(150,35,214,.07)}
+h1 .accent{display:block;color:var(--acid);text-shadow:0 0 38px rgba(150,35,214,.15)}
+.hero-lead{font-size:15px;line-height:1.9;color:#b6a7ca;max-width:590px}
+.hero-lead strong{color:#f5f0ff;font-weight:700}
+.actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:29px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 17px;border:1px solid var(--line);border-radius:12px;font-size:11px;font-weight:800;cursor:pointer;transition:transform .23s,border-color .23s,background .23s}
+.btn:hover{transform:translateY(-3px);border-color:rgba(150,35,214,.55)}
+.btn.primary{background:var(--acid);border-color:var(--acid);color:#ffffff}
+.btn.ghost{background:rgba(255,255,255,.025);color:var(--text)}
+.hero-foot{display:flex;align-items:center;gap:13px;margin-top:36px;color:#829083;font:9px 'DM Mono',monospace;letter-spacing:.06em}
+.hero-foot:before{content:"";width:35px;height:1px;background:var(--acid)}
+/* Original CSS 3D cyber artifact */
+.stage{position:relative;min-height:540px;perspective:1200px;display:grid;place-items:center;isolation:isolate}
+.stage:before{content:"";position:absolute;width:min(84%,480px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(122,166,159,.12),rgba(150,35,214,.05) 32%,transparent 70%);filter:blur(15px);animation:coreGlow 6s ease-in-out infinite}
+@keyframes coreGlow{50%{transform:scale(1.12);opacity:.65}}
+.ring{position:absolute;border:1px solid rgba(150,35,214,.2);border-radius:50%;transform-style:preserve-3d}
+.ring.r1{width:410px;height:410px;transform:rotateX(72deg) rotateZ(-25deg);animation:rotateRing 26s linear infinite}
+.ring.r2{width:355px;height:355px;border-color:rgba(122,166,159,.28);transform:rotateY(70deg) rotateX(20deg);animation:rotateRing2 20s linear infinite}
+.ring.r3{width:465px;height:465px;border-style:dashed;border-color:rgba(199,189,215,.15);transform:rotateX(72deg) rotateZ(40deg);animation:rotateRing 38s linear infinite reverse}
+@keyframes rotateRing{to{rotate:0 0 1 360deg}}
+@keyframes rotateRing2{to{transform:rotateY(430deg) rotateX(20deg)}}
+.stage-nodes{position:absolute;width:430px;height:430px;animation:orbitNodes 30s linear infinite}
+.stage-node{position:absolute;width:9px;height:9px;border-radius:50%;background:var(--acid);box-shadow:0 0 15px rgba(150,35,214,.8)}
+.stage-node:nth-child(1){left:10%;top:25%}.stage-node:nth-child(2){right:8%;top:38%;background:var(--cyan);box-shadow:0 0 15px rgba(122,166,159,.8)}.stage-node:nth-child(3){left:38%;bottom:4%}
+@keyframes orbitNodes{to{transform:rotate(360deg)}}
+.artifact{width:260px;height:340px;position:relative;transform-style:preserve-3d;animation:artifactFloat 7s ease-in-out infinite;transition:transform .18s ease-out;z-index:2}
+@keyframes artifactFloat{0%,100%{transform:translateY(2px) rotateY(-13deg) rotateX(4deg)}50%{transform:translateY(-14px) rotateY(11deg) rotateX(-3deg)}}
+.artifact-shadow{position:absolute;left:-18%;right:-18%;height:36px;bottom:-24px;background:radial-gradient(ellipse,rgba(0,0,0,.85),transparent 70%);filter:blur(10px);transform:translateZ(-60px)}
+.artifact-front{position:absolute;inset:0;border:1px solid rgba(150,35,214,.55);border-radius:22px;background:linear-gradient(145deg,#271b40 0%,#130b20 36%,#080214 100%);box-shadow:inset 0 0 0 8px rgba(255,255,255,.012),inset 18px 0 30px rgba(150,35,214,.025),0 35px 90px rgba(0,0,0,.65);transform:translateZ(34px);overflow:hidden}
+.artifact-side{position:absolute;top:11px;bottom:11px;right:-42px;width:42px;border:1px solid rgba(122,166,159,.35);border-radius:0 12px 12px 0;background:linear-gradient(90deg,#24133f,#070b08);transform:rotateY(90deg) translateZ(239px);transform-origin:left center}
+.artifact-top{position:absolute;left:14px;right:-18px;top:-36px;height:36px;border:1px solid rgba(150,35,214,.33);background:linear-gradient(110deg,#3a2357,#10091c);transform:rotateX(90deg) translateZ(17px);transform-origin:bottom}
+.artifact-front:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 20%,rgba(150,35,214,.1) 48%,transparent 53%);transform:translateX(-130%);animation:artifactSweep 7s ease-in-out infinite}
+@keyframes artifactSweep{0%,28%{transform:translateX(-130%)}65%,100%{transform:translateX(130%)}}
+.artifact-topline{display:flex;justify-content:space-between;color:#c7bdd7;font:9px 'DM Mono',monospace;letter-spacing:.12em;padding:20px 18px 0}
+.artifact-big{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px}
+.artifact-big svg{width:135px;height:150px;filter:drop-shadow(0 0 20px rgba(150,35,214,.16));animation:shieldPulse 4.5s ease-in-out infinite}
+@keyframes shieldPulse{50%{filter:drop-shadow(0 0 35px rgba(122,166,159,.34));transform:translateY(-4px)}}
+.artifact-id{font:9px 'DM Mono',monospace;color:var(--acid);letter-spacing:.24em}
+.artifact-bottom{position:absolute;bottom:0;left:0;right:0;padding:17px 18px;border-top:1px solid rgba(150,35,214,.2);display:flex;align-items:center;justify-content:space-between;font:9px 'DM Mono',monospace;color:#a69abf}
+.artifact-bottom b{color:var(--cyan);font-weight:400}
+.float-label{position:absolute;z-index:5;padding:11px 13px;background:rgba(11,16,11,.86);border:1px solid rgba(150,35,214,.25);border-radius:10px;backdrop-filter:blur(12px);font:9px 'DM Mono',monospace;letter-spacing:.1em;color:var(--acid);box-shadow:0 12px 30px #0005;animation:labelFloat 5s ease-in-out infinite}
+.label-a{left:0;top:95px}.label-b{right:-3px;top:185px;animation-delay:-1.6s;color:var(--cyan);border-color:rgba(122,166,159,.3)}.label-c{left:10px;bottom:65px;animation-delay:-3s}
+@keyframes labelFloat{50%{transform:translateY(-8px) rotate(-1deg)}}
+.stage-caption{position:absolute;right:0;bottom:0;font:9px 'DM Mono',monospace;color:#827197;letter-spacing:.12em;text-align:right;line-height:1.8}
+.rule{height:1px;background:linear-gradient(90deg,transparent,rgba(150,35,214,.28),transparent)}
+
+/* Purple game-collection inspired terminal console — visual-only lab motif */
+.stage:before{background:radial-gradient(circle,rgba(150,35,214,.24),rgba(71,37,183,.15) 38%,transparent 72%)}
+.ring{border-color:rgba(150,35,214,.28)}
+.ring.r2{border-color:rgba(122,166,159,.32)}
+.ring.r3{border-color:rgba(199,189,215,.2)}
+.stage-node{background:#c7bdd7;box-shadow:0 0 15px rgba(150,35,214,.9)}
+.stage-node:nth-child(2){background:#7AA69F;box-shadow:0 0 15px rgba(122,166,159,.8)}
+.terminal-stack{position:relative;width:min(100%,470px);height:430px;transform-style:preserve-3d;z-index:3;animation:consoleFloat 7s ease-in-out infinite;transition:transform .18s ease-out}
+@keyframes consoleFloat{0%,100%{transform:translateY(3px) rotateY(-9deg) rotateX(3deg)}50%{transform:translateY(-12px) rotateY(6deg) rotateX(-2deg)}}
+.terminal-main{position:absolute;inset:36px 23px 34px 12px;border:1px solid rgba(182,113,255,.65);border-radius:17px;overflow:hidden;background:linear-gradient(145deg,rgba(24,12,42,.98),rgba(8,2,20,.97));box-shadow:0 35px 85px rgba(0,0,0,.6),0 0 45px rgba(71,37,183,.22),inset 0 0 45px rgba(150,35,214,.07);transform:translateZ(34px)}
+.terminal-main:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 20%,rgba(199,189,215,.08) 45%,transparent 53%);transform:translateX(-140%);animation:terminalSheen 7.5s ease-in-out infinite}
+@keyframes terminalSheen{0%,30%{transform:translateX(-140%)}68%,100%{transform:translateX(140%)}}
+.term-titlebar{height:40px;display:flex;align-items:center;gap:11px;padding:0 13px;border-bottom:1px solid rgba(199,189,215,.15);background:rgba(199,189,215,.045);font:9px 'DM Mono',monospace;color:#c7bdd7}
+.term-lights{display:flex;gap:5px}.term-lights i{display:block;width:7px;height:7px;border-radius:50%;background:#BB5633}.term-lights i:nth-child(2){background:#d1a969}.term-lights i:nth-child(3){background:#7AA69F}
+.term-titlebar>span:nth-of-type(1){flex:1;text-align:center;color:#aea0c4}
+.term-lock{font-size:7px;color:#7AA69F;letter-spacing:.08em}
+.term-meta{display:flex;justify-content:space-between;gap:12px;padding:14px 17px 9px;color:#897ba0;font:8px 'DM Mono',monospace;letter-spacing:.09em}
+.term-code{padding:10px 17px 0;color:#e2d8f1;font:clamp(8px,1.05vw,10px)/2 'DM Mono',monospace;white-space:nowrap;overflow:hidden}
+.term-prompt{color:#7AA69F}.term-path{color:#b55cff}.term-muted{color:#867594}.term-ok{color:#7AA69F}.term-pass{color:#7AA69F}.term-violet{color:#c7a1ff}.term-hash{margin:4px 0;color:#a99abf;letter-spacing:.04em}
+.term-progress{height:4px;margin:4px 0 12px;background:rgba(199,189,215,.1);border-radius:9px;overflow:hidden}.term-progress span{display:block;height:100%;width:74%;background:linear-gradient(90deg,#4725B7,#9623D6,#c7bdd7);box-shadow:0 0 15px rgba(150,35,214,.9);animation:progressPulse 3s ease-in-out infinite}
+@keyframes progressPulse{50%{width:88%;opacity:.65}}
+.term-result{display:flex;flex-direction:column;gap:3px;padding:9px 10px;border:1px solid rgba(122,166,159,.26);border-radius:7px;background:rgba(122,166,159,.05);white-space:normal}.term-result b{font-size:8px;color:#7AA69F;letter-spacing:.12em}.term-result span{font-size:8px;color:#9e91af}
+.term-cursor-line{margin-top:8px}.term-cursor-line i{display:inline-block;vertical-align:middle;width:6px;height:12px;background:#c7bdd7;animation:blink .9s steps(2,start) infinite}@keyframes blink{to{visibility:hidden}}
+.term-footer{position:absolute;left:0;right:0;bottom:0;border-top:1px solid rgba(199,189,215,.13);padding:12px 15px;display:flex;justify-content:space-between;gap:8px;color:#827294;font:7px 'DM Mono',monospace;letter-spacing:.09em}.term-footer b{color:#7AA69F}
+.terminal-back{position:absolute;border:1px solid rgba(150,35,214,.42);background:linear-gradient(130deg,rgba(37,19,64,.94),rgba(11,5,25,.96));border-radius:13px;box-shadow:0 20px 45px #0006;display:flex;flex-direction:column;gap:12px;padding:15px;font:8px 'DM Mono',monospace;color:#a99abf}
+.terminal-back-a{width:162px;height:105px;left:-3px;top:2px;transform:translateZ(-35px) rotateY(12deg);opacity:.92}.terminal-back-a b{color:#c7bdd7;font-weight:400}.mini-bars{display:flex;align-items:end;height:22px;gap:5px}.mini-bars em{display:block;width:11px;border-radius:3px 3px 0 0;background:linear-gradient(#9623D6,#4725B7);height:50%}.mini-bars em:nth-child(2){height:80%}.mini-bars em:nth-child(3){height:65%}.mini-bars em:nth-child(4){height:100%}.mini-bars em:nth-child(5){height:42%}.mini-bars em:nth-child(6){height:73%}
+.terminal-back-b{width:150px;height:123px;right:-1px;bottom:0;transform:translateZ(-45px) rotateY(-14deg);opacity:.94}.terminal-back-b b{font-size:7px;color:#7AA69F;font-weight:400}.terminal-back-b strong{font-size:28px;font-weight:500;letter-spacing:-.06em;color:#f5f0ff}
+.term-side-tag{position:absolute;right:-8px;top:180px;z-index:4;transform:rotate(90deg) translateZ(44px);transform-origin:right center;color:#9281aa;font:8px 'DM Mono',monospace;letter-spacing:.17em;line-height:1.8}.term-side-tag b{color:#c7bdd7;font-weight:400}
+.float-label{border-color:rgba(150,35,214,.38);color:#c7bdd7;background:rgba(15,5,31,.91)}.label-b{color:#7AA69F;border-color:rgba(122,166,159,.4)}
+.stage-caption{color:#9281a5}
+.avatar{position:relative;overflow:hidden;background:linear-gradient(145deg,#24103f,#0a0317);border-color:rgba(150,35,214,.68);box-shadow:0 0 28px rgba(150,35,214,.18);transform:none}
+.avatar:before{content:">_";font:700 30px 'DM Mono',monospace;color:#b55cff;text-shadow:0 0 15px rgba(150,35,214,.7)}
+.avatar:after{content:"LAB";position:absolute;right:6px;bottom:7px;font:7px 'DM Mono',monospace;letter-spacing:.12em;color:#7AA69F}
+.avatar{font-size:0}
+/* Collection-card treatment for experience cards */
+.exp-card{background:linear-gradient(135deg,rgba(29,14,49,.97),rgba(12,5,27,.96));border-color:rgba(150,35,214,.25)}
+.exp-card:before{content:"";position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(180deg,#9623D6,#4725B7,#7AA69F);opacity:.8}
+.exp-status{border-color:rgba(150,35,214,.35);color:#c7bdd7;background:rgba(150,35,214,.07)}
+.experience-item.visible .exp-card{animation:cardLand .65s cubic-bezier(.2,.75,.2,1) both}
+@keyframes cardLand{from{transform:translateY(15px) rotateX(4deg) scale(.985);filter:brightness(.8)}to{filter:brightness(1)}}
+
+.section-head{padding:78px 0 30px;position:relative}
+.section-head h2{font-size:clamp(37px,5vw,66px);line-height:.95;letter-spacing:-.08em;margin:18px 0 20px}
+.section-head h2 .substroke{color:transparent;-webkit-text-stroke:1px rgba(245,240,255,.6)}
+.section-head p{color:var(--muted);font-size:14px;line-height:1.9;max-width:710px}
+.section-index{position:absolute;right:0;top:80px;color:rgba(150,35,214,.22);font:clamp(55px,10vw,130px) 'DM Mono',monospace;letter-spacing:-.1em}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:0 0 76px}
+.card{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(145deg,rgba(25,33,25,.85),rgba(10,14,11,.9));padding:25px;min-height:235px;transform-style:preserve-3d;transition:border-color .3s,box-shadow .3s;box-shadow:0 10px 45px rgba(0,0,0,.12)}
+.card:before{content:"";position:absolute;width:170px;height:170px;right:-90px;top:-100px;background:rgba(150,35,214,.08);filter:blur(28px);border-radius:50%;transition:transform .4s}
+.card:hover{border-color:rgba(150,35,214,.42);box-shadow:0 24px 55px rgba(0,0,0,.3)}
+.card:hover:before{transform:scale(1.6)}
+.card-icon{width:43px;height:43px;display:grid;place-items:center;border:1px solid rgba(150,35,214,.32);border-radius:13px;color:var(--acid);font-size:19px;background:rgba(150,35,214,.04);transform:translateZ(22px)}
+.card h3{font-size:16px;letter-spacing:-.035em;margin:24px 0 10px;transform:translateZ(18px)}
+.card p{color:var(--muted);font-size:12px;line-height:1.85;margin:0;transform:translateZ(12px)}
+.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}
+.chip{border:1px solid var(--line);color:#c2b3d7;padding:6px 9px;border-radius:999px;font:9px 'DM Mono',monospace}
+.timeline-wrap{position:relative;padding:14px 0 76px}
+.timeline-spine{position:absolute;left:184px;top:0;bottom:80px;width:1px;background:linear-gradient(180deg,transparent,rgba(150,35,214,.52) 8%,rgba(122,166,159,.22) 80%,transparent)}
+.experience-item{position:relative;display:grid;grid-template-columns:155px 1fr;gap:60px;margin-bottom:22px;perspective:1200px;opacity:0;transform:translateY(36px) rotateX(5deg);transition:opacity .7s ease,transform .8s cubic-bezier(.18,.75,.2,1)}
+.experience-item.visible{opacity:1;transform:translateY(0) rotateX(0)}
+.exp-date{font:10px 'DM Mono',monospace;color:var(--acid);letter-spacing:.08em;padding-top:26px;text-align:right;line-height:1.8}
+.exp-pin{position:absolute;left:178px;top:31px;width:13px;height:13px;border-radius:50%;background:var(--acid);border:3px solid #171e14;box-shadow:0 0 0 1px rgba(150,35,214,.65),0 0 20px rgba(150,35,214,.4);z-index:2}
+
+.exp-console{position:relative;display:flex;align-items:center;gap:10px;min-width:0;margin-top:14px;padding:10px 12px;border:1px solid rgba(150,35,214,.26);border-radius:10px;background:linear-gradient(90deg,rgba(71,37,183,.15),rgba(8,2,20,.62));font:8px 'DM Mono',monospace;letter-spacing:.025em;overflow:hidden;transform:translateZ(16px)}
+.exp-console:after{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,transparent,rgba(199,189,215,.65),transparent);opacity:.45;animation:consoleScan 4.5s linear infinite}
+@keyframes consoleScan{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+.console-mark{color:#7AA69F;white-space:nowrap}.console-cmd{color:#b6a7ca;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}.console-result{color:#c7bdd7;border:1px solid rgba(150,35,214,.35);background:rgba(150,35,214,.08);padding:4px 6px;border-radius:5px;white-space:nowrap}
+
+.exp-card{position:relative;min-height:195px;border:1px solid rgba(199,189,215,.15);border-radius:20px;padding:25px 28px;background:linear-gradient(130deg,rgba(25,34,25,.94),rgba(10,14,11,.94));box-shadow:0 18px 48px rgba(0,0,0,.22);transform-style:preserve-3d;transition:border-color .3s,box-shadow .3s}
+.exp-card:after{content:attr(data-index);position:absolute;right:20px;top:9px;font:clamp(42px,6vw,73px) 'DM Mono',monospace;color:rgba(150,35,214,.07);line-height:1;pointer-events:none}
+.exp-card:hover{border-color:rgba(122,166,159,.42);box-shadow:0 28px 65px rgba(0,0,0,.35)}
+.exp-top{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap;transform:translateZ(25px)}
+.exp-status{font:9px 'DM Mono',monospace;color:var(--cyan);letter-spacing:.1em;border:1px solid rgba(122,166,159,.24);padding:7px 9px;border-radius:8px}
+.exp-card h3{font-size:21px;letter-spacing:-.05em;margin:17px 0 6px;transform:translateZ(28px)}
+.exp-org{color:#d9cee8;font-size:12px;transform:translateZ(20px)}
+.exp-card ul{color:var(--muted);font-size:12px;line-height:1.9;padding-left:18px;margin:16px 0 0;max-width:800px;transform:translateZ(12px)}
+.exp-card ul li+li{margin-top:3px}
+.exp-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px;transform:translateZ(14px)}
+.metric-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:0 0 78px}
+.metric{border-top:1px solid rgba(150,35,214,.34);padding:19px 0 0}
+.metric strong{display:block;font-size:clamp(32px,4vw,47px);letter-spacing:-.08em;color:var(--acid)}
+.metric span{display:block;color:var(--muted);font:9px 'DM Mono',monospace;letter-spacing:.1em;text-transform:uppercase;line-height:1.7;margin-top:5px}
+.about-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:18px;padding-bottom:75px}
+.profile-card,.about-card{border:1px solid var(--line);border-radius:22px;background:linear-gradient(150deg,rgba(24,32,24,.85),rgba(9,13,10,.92));padding:28px;position:relative;overflow:hidden}
+.profile-card:before{content:"";position:absolute;width:230px;height:230px;right:-100px;top:-100px;background:rgba(150,35,214,.1);filter:blur(40px);border-radius:50%}
+.avatar{width:92px;height:92px;display:grid;place-items:center;border:1px solid rgba(150,35,214,.5);border-radius:24px;background:linear-gradient(145deg,#2c3922,#0d130e);font-size:25px;letter-spacing:-.08em;color:var(--acid);font-weight:800;box-shadow:10px 12px 0 rgba(150,35,214,.04);transform:rotate(-4deg)}
+.profile-card h3{font-size:24px;letter-spacing:-.05em;margin:24px 0 4px}
+.profile-title{font:10px 'DM Mono',monospace;color:var(--acid);letter-spacing:.1em;text-transform:uppercase}
+.profile-card p,.about-card p{color:var(--muted);font-size:12px;line-height:1.9}
+.contact-list{display:grid;gap:12px;margin-top:23px;font-size:11px;position:relative}
+.contact-list a{color:#d2c1e8}.contact-list a:hover{color:var(--acid)}
+.about-card h3{font-size:18px;letter-spacing:-.04em;margin:5px 0 15px}
+.special-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:20px}
+.special{border:1px solid var(--line);border-radius:13px;padding:14px;background:rgba(255,255,255,.018)}
+.special strong{display:block;font-size:12px;margin-bottom:6px;color:var(--text)}
+.special span{font-size:10px;line-height:1.7;color:var(--muted)}
+.bounty-block{margin-top:25px;padding:20px;border:1px solid rgba(150,35,214,.23);border-radius:17px;background:linear-gradient(100deg,rgba(150,35,214,.07),rgba(122,166,159,.025))}
+.bounty-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.bounty-head h3{margin:0;font-size:16px}
+.bounty-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:16px}
+.bounty-stat{border-top:1px solid rgba(150,35,214,.25);padding-top:12px}
+.bounty-stat strong{display:block;font-size:34px;letter-spacing:-.08em;color:var(--acid)}
+.bounty-stat span{display:block;font:9px 'DM Mono',monospace;color:#b6a7ca;line-height:1.7;margin-top:5px}
+.contact-band{display:flex;justify-content:space-between;align-items:center;gap:25px;margin:0 0 75px;padding:30px;border:1px solid rgba(150,35,214,.27);border-radius:20px;background:linear-gradient(105deg,rgba(150,35,214,.08),rgba(122,166,159,.025))}
+.contact-band h3{font-size:23px;letter-spacing:-.06em;margin:0 0 8px}
+.contact-band p{color:var(--muted);font-size:12px;line-height:1.8;margin:0}
+footer{border-top:1px solid var(--line);padding:24px 0;color:#7c897b;font:9px 'DM Mono',monospace;letter-spacing:.06em}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.18,.75,.2,1)}
+.reveal.visible{opacity:1;transform:none}
+@media(max-width:900px){
+ .hero{grid-template-columns:1fr;gap:0;padding-top:60px}.hero-copy{max-width:760px}.stage{min-height:520px;margin-top:-10px}
+ .grid{grid-template-columns:repeat(2,1fr)}.about-grid{grid-template-columns:1fr}.nav-cta{display:none}
+}
+@media(max-width:600px){
+ .wrap{width:calc(100% - 28px)}.nav{padding:11px 0;flex-wrap:wrap}.brand{font-size:13px}.navlinks{order:3;width:100%;justify-content:space-between}.navlinks button{flex:1;padding:10px 4px;font-size:10px}
+ .hero{padding:48px 0 25px;min-height:auto}h1{font-size:clamp(39px,11.4vw,62px)}.hero-lead{font-size:13px}
+  .stage{min-height:420px;transform:scale(.91);margin:-15px -10px -8px;overflow:clip}.terminal-stack{width:100%;max-width:400px;height:370px}.terminal-main{inset:35px 19px 30px 8px}.ring.r1{width:285px;height:285px}.ring.r2{width:245px;height:245px}.ring.r3{width:285px;height:285px}.stage-nodes{width:290px;height:290px}.label-a{left:0;top:43px}.label-b{right:0;top:130px}.label-c{left:0;bottom:48px}.term-side-tag{right:0;top:153px}.terminal-back-a{transform:translateZ(-20px) scale(.85)}.terminal-back-b{transform:translateZ(-30px) scale(.85)}
+ .section-head{padding:52px 0 25px}.section-index{top:52px}.grid{grid-template-columns:1fr;padding-bottom:55px}.card{min-height:unset}
+ .timeline-spine{left:8px}.experience-item{grid-template-columns:1fr;gap:10px;padding-left:29px;margin-bottom:25px}.exp-date{text-align:left;padding-top:0}.exp-pin{left:2px;top:4px;width:12px;height:12px}.exp-card{padding:22px 18px}.exp-card h3{font-size:18px}
+ .metric-row{gap:10px}.metric strong{font-size:30px}.metric span{font-size:8px}
+ .special-grid{grid-template-columns:1fr}.bounty-stats{gap:10px}.bounty-stat strong{font-size:29px}.contact-band{align-items:flex-start;flex-direction:column;padding:24px}.footer{line-height:1.8}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+ #cyberCanvas,.bg-grid{display:none!important}.reveal,.experience-item{opacity:1!important;transform:none!important}
+}
+</style>
+</head>
+<body>
+<canvas id="cyberCanvas" aria-hidden="true"></canvas><div class="bg-grid"></div><div class="bg-vignette"></div><div class="pointer-glow" id="pointerGlow"></div>
+<header><div class="wrap nav">
+  <a class="brand" href="#" onclick="showPage('home');return false;" aria-label="Robin Jain home"><span class="brand-mark">RJ</span><span>ROBIN JAIN<small>APPLICATION SECURITY / VAPT</small></span></a>
+  <nav class="navlinks" aria-label="Main navigation">
+    <button class="active" data-page="home">Home</button><button data-page="experience">Experience</button><button data-page="services">Services</button><button data-page="about">About</button>
+  </nav>
+  <a class="nav-cta" href="mailto:jainritik665@gmail.com?subject=Security%20Assessment%20Enquiry">LET'S TALK ↗</a>
+</div></header>
+<main class="wrap">
+<section id="home" class="page active">
+  <div class="hero">
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="pulse"></span> Independent security mindset / Professional VAPT</div>
+      <h1 aria-label="Robin Jain — Application Security and VAPT Analyst"><span class="solid">APPLICATION</span><span class="outline">SECURITY</span><span class="accent">VAPT.</span></h1>
+      <p class="hero-lead">I'm <strong>Robin Jain, an Application Security and VAPT Analyst based in Noida, India.</strong> I specialize in web application penetration testing, API security, mobile application security and network vulnerability assessment. My focus is on reproducible findings, clear risk context and actionable remediation.</p>
+      <div class="actions"><button class="btn primary" onclick="showPage('experience')">EXPLORE EXPERIENCE ↗</button><button class="btn ghost" onclick="showPage('services')">VIEW SPECIALIZATION ↓</button><a class="btn ghost" href="mailto:jainritik665@gmail.com">CONTACT ↗</a></div>
+      <div class="hero-foot">TEST RESPONSIBLY · AUTHORIZATION FIRST · EVIDENCE ALWAYS</div>
+    </div>
+    <div class="stage" id="stage">
+      <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+      <div class="stage-nodes"><i class="stage-node"></i><i class="stage-node"></i><i class="stage-node"></i></div>
+      <div class="float-label label-a">[ CMD / LAB MODE ]</div>
+      <div class="float-label label-b">HASH AUDIT · SIMULATED</div>
+      <div class="float-label label-c">IDENTIFY → VALIDATE → REPORT</div>
+      <div class="terminal-stack" id="terminalStack" aria-label="Decorative cybersecurity terminal visual">
+        <div class="terminal-back terminal-back-a"><span>01 / SCOPE</span><b>AUTHORIZED LAB</b><i class="mini-bars"><em></em><em></em><em></em><em></em><em></em><em></em></i></div>
+        <div class="terminal-back terminal-back-b"><span>02 / TELEMETRY</span><b>PACKETS ANALYZED</b><strong>08,492</strong></div>
+        <div class="terminal-main">
+          <div class="term-titlebar"><div class="term-lights"><i></i><i></i><i></i></div><span>robin@sec-lab — zsh</span><span class="term-lock">● LAB ONLY</span></div>
+          <div class="term-meta"><span>SESSION_0XRJ</span><span>SECURITY CONSOLE v2.6</span></div>
+          <div class="term-code">
+            <div><span class="term-prompt">robin@sec-lab</span><span class="term-path">:~$</span> ./audit-lab --sample-hash</div>
+            <div class="term-muted">[i] Loading local demonstration dataset…</div>
+            <div><span class="term-ok">[+]</span> Scope check <span class="term-pass">PASSED</span></div>
+            <div><span class="term-ok">[+]</span> Hash format <span class="term-violet">IDENTIFIED</span></div>
+            <div><span class="term-ok">[+]</span> Wordlist policy <span class="term-pass">LOCAL ONLY</span></div>
+            <div class="term-hash">digest: 5f2a••••••••c91e</div>
+            <div class="term-progress"><span></span></div>
+            <div class="term-result"><b>SIMULATION COMPLETE</b><span>0 external targets · 0 network requests</span></div>
+            <div class="term-cursor-line"><span class="term-prompt">robin@sec-lab</span><span class="term-path">:~$</span> <i></i></div>
+          </div>
+          <div class="term-footer"><span>ROOT CAUSE / EVIDENCE / FIX</span><span>ENCRYPTED VIEW <b>●</b></span></div>
+        </div>
+        <div class="term-side-tag">APPSEC<br><b>FIELD NOTES</b></div>
+      </div>
+      <div class="stage-caption">FIG. 01 — COMMAND LINE / SECURITY RESEARCH<br>DECORATIVE LAB SIMULATION</div>
+    </div>
+  </div>
+  <div class="rule"></div>
+  <div class="section-head reveal"><div class="eyebrow">01 / SNAPSHOT</div><h2>Find the flaw.<br><span class="substroke">Explain the impact.</span></h2><p>Security work should go beyond a scanner result. My focus is on validating behavior, understanding impact and giving teams a clear path to remediation.</p></div>
+  <div class="metric-row">
+    <div class="metric reveal"><strong data-count="3">3+</strong><span>Years in cybersecurity</span></div>
+    <div class="metric reveal"><strong data-count="300">300+</strong><span>Applications, mobile apps & APIs assessed*</span></div>
+    <div class="metric reveal"><strong data-count="15">15+</strong><span>Hall of Fame acknowledgements*</span></div>
+  </div>
+  <div class="contact-band reveal"><div><h3>Have a scope to secure?</h3><p>Share your application type, testing goals and authorization scope to start a conversation.</p></div><a class="btn primary" href="mailto:jainritik665@gmail.com?subject=VAPT%20Enquiry">START A CONVERSATION ↗</a></div>
+</section>
+
+<section id="experience" class="page">
+  <div class="section-head"><div class="eyebrow"><span class="pulse"></span> 02 / OPERATOR LOG</div><div class="section-index">02</div><h2>Experience in<br><span class="substroke">the field.</span></h2><p>A timeline of application security, vulnerability assessment, bug bounty research and hands-on security practice. Each card has a subtle 3D perspective interaction — move your cursor over a card.</p></div>
+  <div class="timeline-wrap">
+    <div class="timeline-spine"></div>
+    <article class="experience-item"><div class="exp-date">APR 2025 — PRESENT</div><i class="exp-pin"></i><div class="exp-card" data-index="01"><div class="exp-top"><span class="mono">CURRENT ROLE</span><span class="exp-status">● ACTIVE</span></div><h3>L-1 InfoSec Consultant</h3><div class="exp-org">AKS Information Technology Services · Noida, India</div><div class="exp-console"><span class="console-mark">root@aks</span><span class="console-cmd">$ vapt --scope web,api</span><span class="console-result">[ REPORT ]</span></div><ul><li>Perform vulnerability assessments and penetration testing on web applications and APIs.</li><li>Apply OWASP Top 10, Burp Suite and Nmap to identify risks and prepare actionable recommendations.</li><li>Work with development teams on secure practices and mentor a trainee in practical application security tasks.</li><li>Resume portfolio metric: 300+ web applications, mobile applications and web services/APIs assessed across projects.</li></ul><div class="exp-tags"><span class="chip">Web VAPT</span><span class="chip">API Security</span><span class="chip">OWASP</span><span class="chip">Reporting</span></div></div></article>
+    <article class="experience-item"><div class="exp-date">FEB 2024 — MAR 2025</div><i class="exp-pin"></i><div class="exp-card" data-index="02"><div class="exp-top"><span class="mono">APPLICATION SECURITY</span><span class="exp-status">ASSESSMENT</span></div><h3>Application Security Engineer</h3><div class="exp-org">AKS Information Technology Services · Noida, India</div><div class="exp-console"><span class="console-mark">appsec@lab</span><span class="console-cmd">$ api-audit --authz-check</span><span class="console-result">[ REVIEW ]</span></div><ul><li>Conducted in-depth web application VAPT and API security assessments.</li><li>Delivered evidence-backed findings and actionable remediation recommendations to clients.</li><li>Collaborated with development teams to strengthen security practices throughout the SDLC.</li></ul><div class="exp-tags"><span class="chip">Authentication</span><span class="chip">Authorization</span><span class="chip">Burp Suite</span><span class="chip">Nmap</span></div></div></article>
+    <article class="experience-item"><div class="exp-date">MAR 2021 — PRESENT</div><i class="exp-pin"></i><div class="exp-card" data-index="03"><div class="exp-top"><span class="mono">INDEPENDENT RESEARCH</span><span class="exp-status">BUG BOUNTY</span></div><h3>Bug Hunter</h3><div class="exp-org">Bugcrowd · Remote</div><div class="exp-console"><span class="console-mark">research@lab</span><span class="console-cmd">$ hash-audit --sample-only</span><span class="console-result">[ LAB ONLY ]</span></div><ul><li>Conduct security assessments within program scope and follow responsible disclosure practices.</li><li>Reported 2,000+ vulnerabilities through security research and bug bounty work, alongside Hall of Fame acknowledgements across programs.</li><li>Focus on reproducible evidence and clear technical communication.</li></ul><div class="exp-tags"><span class="chip">Reconnaissance</span><span class="chip">Web Security</span><span class="chip">Responsible Disclosure</span></div></div></article>
+    <article class="experience-item"><div class="exp-date">MAY 2022 — AUG 2022</div><i class="exp-pin"></i><div class="exp-card" data-index="04"><div class="exp-top"><span class="mono">FOUNDATION</span><span class="exp-status">INTERNSHIP</span></div><h3>Cyber Security Engineer Intern</h3><div class="exp-org">Virtually Testing Foundation · Remote</div><div class="exp-console"><span class="console-mark">trainee@lab</span><span class="console-cmd">$ recon --training-target</span><span class="console-result">[ SANDBOX ]</span></div><ul><li>Practiced vulnerability assessment, threat detection and risk mitigation in guided exercises.</li><li>Worked with Burp Suite, Nmap and SQLMap; explored common web vulnerabilities and HTTP/HTTPS fundamentals.</li></ul><div class="exp-tags"><span class="chip">Security Labs</span><span class="chip">Web Protocols</span><span class="chip">Network Discovery</span></div></div></article>
+  </div>
+  <div class="contact-band reveal"><div><h3>Looking for focused VAPT support?</h3><p>Let's discuss an authorized assessment, a clear deliverable and an agreed scope.</p></div><a class="btn primary" href="mailto:jainritik665@gmail.com?subject=VAPT%20Project">DISCUSS A PROJECT ↗</a></div>
+</section>
+
+<section id="services" class="page">
+  <div class="section-head"><div class="eyebrow">03 / CAPABILITIES</div><div class="section-index">03</div><h2>Specialized testing.<br><span class="substroke">Useful outcomes.</span></h2><p>Security assessment support scoped to the application, environment and written authorization. Findings are documented with evidence, risk context and remediation guidance.</p></div>
+  <div class="grid">
+    <article class="card tilt"><div class="card-icon">⌘</div><h3>Web Application VAPT</h3><p>Test authentication, authorization, session management, input validation and business logic against relevant web security risks.</p><div class="chips"><span class="chip">OWASP Top 10</span><span class="chip">Burp Suite</span></div></article>
+    <article class="card tilt"><div class="card-icon">⌁</div><h3>API Security Testing</h3><p>Assess access controls, object-level authorization, data exposure, validation and endpoint security behavior.</p><div class="chips"><span class="chip">REST APIs</span><span class="chip">Postman</span></div></article>
+    <article class="card tilt"><div class="card-icon">◈</div><h3>Mobile App Security</h3><p>Security assessment for Android and iOS applications within an agreed test environment and scope.</p><div class="chips"><span class="chip">Android</span><span class="chip">iOS</span></div></article>
+    <article class="card tilt"><div class="card-icon">⌬</div><h3>Network VA & PT</h3><p>Authorized internal or external vulnerability assessment for defined networks, hosts and infrastructure.</p><div class="chips"><span class="chip">Nmap</span><span class="chip">Risk Review</span></div></article>
+    <article class="card tilt"><div class="card-icon">▤</div><h3>Findings & Reporting</h3><p>Clear write-ups with reproducible steps, severity context, business impact and practical remediation actions.</p><div class="chips"><span class="chip">Evidence</span><span class="chip">Remediation</span></div></article>
+    <article class="card tilt"><div class="card-icon">⌘</div><h3>Security Workflow Automation</h3><p>AI-assisted triage and report drafting exploration, with human verification retained for confirmed findings.</p><div class="chips"><span class="chip">Python</span><span class="chip">AI-assisted</span></div></article>
+  </div>
+  <div class="contact-band reveal"><div><h3>One app. One clear scope. Better clarity.</h3><p>Tell me what you're building and what you need tested.</p></div><a class="btn primary" href="mailto:jainritik665@gmail.com?subject=Security%20Assessment%20Scope">REQUEST A DISCUSSION ↗</a></div>
+</section>
+
+<section id="about" class="page">
+  <div class="section-head"><div class="eyebrow">04 / THE PERSON BEHIND THE TESTS</div><div class="section-index">04</div><h2>Curiosity meets<br><span class="substroke">method.</span></h2><p>I study how identities, requests, business logic and platform controls interact — then translate what I find into practical security fixes.</p></div>
+  <div class="about-grid">
+    <aside class="profile-card reveal"><div class="avatar">RJ</div><h3>Robin Jain</h3><div class="profile-title">Application Security · VAPT</div><p>Based in Noida, India. Application security professional with 3+ years of experience across web, API, mobile and network security.</p><div class="chips"><span class="chip">English</span><span class="chip">Hindi</span></div><div class="contact-list"><a href="mailto:jainritik665@gmail.com">✉ jainritik665@gmail.com</a><a href="https://www.linkedin.com/in/robinjain1" target="_blank" rel="noreferrer">↗ LinkedIn / robin-jain1</a><a href="https://github.com/RobinJainSec" target="_blank" rel="noreferrer">↗ GitHub / RobinJainSec</a><a href="https://www.twitter.com/jain_robin___" target="_blank" rel="noreferrer">↗ X / @jain_robin___</a></div></aside>
+    <div class="about-card reveal">
+      <div class="eyebrow">SPECIALIZATION / 04 DOMAINS</div><h3>My security focus</h3><p>Application security is more than a scanner result. I look for the conditions that make a weakness exploitable, validate evidence and explain fixes in a way engineering teams can use.</p>
+      <div class="special-grid">
+        <div class="special"><strong>Web Application VAPT</strong><span>OWASP risks, business logic, authentication and access control.</span></div>
+        <div class="special"><strong>API Security</strong><span>Authorization, endpoint behavior, data exposure and validation.</span></div>
+        <div class="special"><strong>Mobile Security</strong><span>Android/iOS application testing and client-side security checks.</span></div>
+        <div class="special"><strong>Network VA/PT</strong><span>Authorized internal/external infrastructure assessments.</span></div>
+      </div>
+      <div class="bounty-block"><div class="bounty-head"><h3>Bug bounty & research</h3><span class="mono" style="color:var(--acid)">PUBLIC ACHIEVEMENTS*</span></div><p>Hands-on vulnerability research focused on responsible reporting, useful evidence and clear technical write-ups.</p><div class="bounty-stats"><div class="bounty-stat"><strong>2,000+</strong><span>VULNERABILITIES REPORTED*</span></div><div class="bounty-stat"><strong>15+</strong><span>HALL OF FAME ACKNOWLEDGEMENTS*</span></div></div><p style="font-size:9px;color:#758273;margin-bottom:0">*Achievement figures as provided by Robin Jain.</p></div>
+      <h3 style="margin-top:28px">Toolkit & methodology</h3><div class="chips"><span class="chip">Burp Suite</span><span class="chip">Nmap</span><span class="chip">Postman</span><span class="chip">SQLMap</span><span class="chip">OWASP Top 10</span><span class="chip">CVSS</span><span class="chip">SAST / DAST</span><span class="chip">SCA</span><span class="chip">Reconnaissance</span></div>
+      <h3 style="margin-top:27px">Certifications & education</h3><div class="chips"><span class="chip">CEH — EC-Council</span><span class="chip">CNSP</span><span class="chip">CAP</span><span class="chip">ISCP</span></div><p><strong style="color:var(--text)">Master of Computer Applications (MCA)</strong><br>Rajiv Gandhi Proudyogiki Vishwavidyalaya · 2021–2023</p>
+    </div>
+  </div>
+  <div class="contact-band reveal"><div><h3>Let's make applications harder to break.</h3><p>For VAPT, application security and professional collaboration.</p></div><a class="btn primary" href="mailto:jainritik665@gmail.com?subject=Hello%20Robin">CONTACT ROBIN ↗</a></div>
+</section>
+</main>
+<footer><div class="wrap footer"><span>© <span id="year"></span> RJ — FIND THE FLAW. FIX THE RISK.</span><span>AUTHORIZED TESTING ONLY · EVIDENCE ALWAYS</span><a href="mailto:jainritik665@gmail.com">EMAIL ↗</a></div></footer>
+
+<script>
+const buttons=[...document.querySelectorAll('[data-page]')];
+const pages=[...document.querySelectorAll('.page')];
+let revealObserver;
+function initReveal(){
+  if(revealObserver)revealObserver.disconnect();
+  const els=document.querySelectorAll('.page.active .reveal, .page.active .experience-item');
+  revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target);}
+  }),{threshold:.12});
+  els.forEach(el=>revealObserver.observe(el));
+}
+function showPage(id){
+  pages.forEach(p=>p.classList.toggle('active',p.id===id));
+  buttons.forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(initReveal,70);
+}
+buttons.forEach(b=>b.addEventListener('click',()=>showPage(b.dataset.page)));
+document.querySelectorAll('a[href^="mailto:"]').forEach(a=>a.setAttribute('aria-label',a.textContent.trim()||'Contact by email'));
+document.getElementById('year').textContent=new Date().getFullYear();
+initReveal();
+
+// Subtle 3D tilt for work cards. Disabled for touch and reduced-motion users.
+if(matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+  document.querySelectorAll('.tilt,.exp-card').forEach(card=>{
+    card.addEventListener('pointermove',e=>{
+      const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      card.style.transform=`perspective(950px) rotateY(${x*5}deg) rotateX(${-y*4}deg) translateY(-2px)`;
+    });
+    card.addEventListener('pointerleave',()=>{card.style.transform='';});
+  });
+  const stage=document.getElementById('stage'),terminal=document.getElementById('terminalStack');
+  if(stage&&terminal){
+    stage.addEventListener('pointermove',e=>{
+      const r=stage.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      terminal.style.animation='none';
+      terminal.style.transform=`translateY(-5px) rotateY(${x*12}deg) rotateX(${-y*8}deg)`;
+    });
+    stage.addEventListener('pointerleave',()=>{terminal.style.animation='';terminal.style.transform='';});
+  }
+}
+const glow=document.getElementById('pointerGlow');
+window.addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'},{passive:true});
+
+// Cinematic animated particle mesh. Keeps frame count low on mobile and pauses in background tabs.
+(()=>{
+  const canvas=document.getElementById('cyberCanvas'),ctx=canvas.getContext('2d');
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let w=0,h=0,dpr=1,pts=[],raf=0,frame=0;
+  const pointer={x:-9999,y:-9999};
+  function resize(){
+    dpr=Math.min(devicePixelRatio||1,1.5);w=innerWidth;h=innerHeight;
+    canvas.width=Math.floor(w*dpr);canvas.height=Math.floor(h*dpr);canvas.style.width=w+'px';canvas.style.height=h+'px';ctx.setTransform(dpr,0,0,dpr,0,0);
+    const n=Math.max(22,Math.min(75,Math.floor(w*h/18500)));
+    pts=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:.55+Math.random()*1.3,phase:Math.random()*6.28}));
+    if(!reduced)draw();
+  }
+  function draw(){
+    if(document.hidden||reduced)return;
+    ctx.clearRect(0,0,w,h);
+    const max=w<640?94:145;
+    for(let i=0;i<pts.length;i++){
+      const a=pts[i];a.x+=a.vx;a.y+=a.vy;a.phase+=.012;
+      if(a.x<0||a.x>w)a.vx*=-1;if(a.y<0||a.y>h)a.vy*=-1;
+      for(let j=i+1;j<pts.length;j++){
+        const b=pts[j],dx=a.x-b.x,dy=a.y-b.y,d=Math.hypot(dx,dy);
+        if(d<max){ctx.strokeStyle=`rgba(150,35,214,${(1-d/max)*.21})`;ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();}
+      }
+      const md=Math.hypot(a.x-pointer.x,a.y-pointer.y);
+      ctx.beginPath();ctx.arc(a.x,a.y,a.r+(md<125?.8:0),0,Math.PI*2);
+      ctx.fillStyle=md<125?'rgba(150,35,214,.9)':`rgba(122,166,159,${.22+.35*(.5+.5*Math.sin(a.phase))})`;ctx.fill();
+    }
+    const scan=(frame%850)/850*h,grad=ctx.createLinearGradient(0,scan-26,0,scan+26);
+    grad.addColorStop(0,'rgba(150,35,214,0)');grad.addColorStop(.5,'rgba(150,35,214,.045)');grad.addColorStop(1,'rgba(150,35,214,0)');
+    ctx.fillStyle=grad;ctx.fillRect(0,scan-26,w,52);frame++;raf=requestAnimationFrame(draw);
+  }
+  addEventListener('resize',resize,{passive:true});
+  addEventListener('pointermove',e=>{pointer.x=e.clientX;pointer.y=e.clientY},{passive:true});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(raf);else if(!reduced)draw()});
+  resize();
+})();
+</script>
+</body>
+</html>
